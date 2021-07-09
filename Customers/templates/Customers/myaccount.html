@@ -1,0 +1,26 @@
+{% extends 'Customers/index.html' %}
+
+{% block tilte %}
+    <title>My Account</title>
+{% endblock %}
+
+{% block content %}
+    <div class="container content-height vertical-center">
+        <div class="card text-center mx-auto bg-light" style="width: 20rem;">
+            <div class="card-body">
+                <div class="bold-text">
+                    <h5 class="card-title">{{ act.MyName }}</h5>
+                    <p class="card-text">Account Number : {{ act.AccountNumber }}</p>
+                    <p class="card-text">Email : {{ act.MyMail }}</p>
+                    <p class="card-text">Balance : {{ act.Balance }}</p>
+                    <a href="{% url 'viewcustomers'%}" class="btn btn-primary mt-3">View Your Customers</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5 social-media">
+            <a href="https://www.linkedin.com/in/avnyaswanth-263a641a5" target="_blank"><i class="fab fa-linkedin fa-2x px-5"></i></a>
+            <a href="https://twitter.com/_atheis_t?s=08" target="_blank"><i class="fab fa-twitter fa-2x px-5"></i></a>
+            <a href="https://github.com/avnyaswanth" target="_blank"><i class="fab fa-github fa-2x px-5"></i></a>
+        </div>
+    </div>
+{% endblock %}

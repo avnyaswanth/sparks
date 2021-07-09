@@ -1,0 +1,21 @@
+{% extends 'Customers/index.html' %}
+
+{% block title %}
+    <title>{{ curcustomer.CustomerName }}</title>
+{% endblock %}
+
+{% block content %}
+    <div class="container content-height vertical-center">
+        <div class="card text-center mx-auto bg-light" style="width: 20rem;">
+            <div class="card-body">
+                <div class="bold-text">
+                    <h5 class="card-title">{{ curcustomer.CustomerName }}</h5>
+                    <p class="card-text">Account Number : {{ curcustomer.AccountNumber }}</p>
+                    <p class="card-text">Email : {{ curcustomer.CustomerMail }}</p>
+                    <p class="card-text">Balance : {{ curcustomer.Balance }}</p>
+                    <a href="{% url 'transfer' curcustomer.id %}" class="btn btn-primary mt-3">Transfer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

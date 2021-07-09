@@ -1,0 +1,28 @@
+{% extends 'Customers/index.html' %}
+
+{% block title %}
+    <title>Transfer</title>
+{% endblock %}
+
+{% block content %}
+    {% if messages %}
+        {% for message in messages %}
+                <div class="alert alert-warning alert-dismissible fade show mt-5" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+    {% endif %}
+    <div class="container content-height vertical-center text-center bold-text">
+        <h1 class="mb-3">Sending to {{ curcustomer.CustomerName }}</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="amount">Enter the amount : </label>
+            <input type="text" name="amount" id="amount" placeholder="Less than {{ act.Balance }}" autofocus>
+            <br>
+            <input type="submit" value="Send" class="btn btn-warning mt-2"> 
+        </form>
+    </div>
+{% endblock %}
