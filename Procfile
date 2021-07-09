@@ -1,1 +1,1 @@
-web : gunicorn MyBank.wsgi
+web:gunicorn MyBank.wsgi
