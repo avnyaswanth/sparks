@@ -1,0 +1,85 @@
+body {
+    background: #FBF7F7;
+}
+
+.bold-text {
+    font-weight: 500;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.vertical-center {
+    padding: 10rem 0;
+}
+
+.large-h1 {
+    font-size: 400%;
+}
+
+.content-height {
+    min-height: 33rem;
+}
+
+/* NAVS  */
+
+.nav-link:hover {
+    opacity: 90%;
+}
+
+/* HOMEPAGE */
+
+div.homepage-content {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+div.homepage-content:hover {
+    opacity: 90%;
+}
+
+div.homepage-content h1,div.homepage-content h3, div.homepage-content h4 {
+    padding: 0.3rem 0;
+}
+
+/* ABOUT PAGE */
+
+div.about-container {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+.caption {
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 0.5rem 0.5rem;
+    font-weight: 500;
+}
+
+/* FOOTER */
+
+#main-footer p {
+    margin: 0;
+    padding: 0;
+}
+
+#main-footer {
+    padding: 0.8rem 0;
+    color: #fff;
+    text-align: center;
+}
+
+/*  SOCIAL MEDIA LINKS IN MY ACCOUNT TEMPLATE  */
+
+.social-media {
+    margin: 5rem auto;
+    text-align: center;
+}
+
+.social-media-link {
+    padding: 0 2rem;
+}
