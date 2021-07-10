@@ -30,9 +30,9 @@ def transfer(request,c_id):
             myact.save()
             currentcustomer.Balance += int(enteredamount)
             currentcustomer.save()
-            messages.success(request,f'You have successfully sent {enteredamount} rupees to {currentcustomer.CustomerName}')
+            messages.success(request,f'Transaction Successful.')
         elif enteredamount:
-            messages.error(request,f'You are trying to send {int(enteredamount)}.Your Current Balance is {myact.Balance}.Please enter valid amount')
+            messages.error(request,f'Insufficient Funds!!!')
         return redirect('transfer',c_id=currentcustomer.id)
 
     return render(request,'Customers/transfer.html',{'curcustomer' : currentcustomer,'act' : myact})
